@@ -1,0 +1,170 @@
+    
+    * {
+      margin: 0;
+      padding: 0;
+    }    
+
+    .container {
+      display: grid;
+      justify-items: center;
+    }
+
+    .animation_container {
+      width: 100%;
+      max-width: 1500px;
+      min-height: 100vh;
+      background-color: rgb(230, 229, 244);
+      display: grid;
+      grid-template-areas: "header"
+                           "main"
+                           "footer";
+      grid-template-rows: auto 1fr 1fr;
+      grid-template-columns: 1fr;
+    }
+
+    .header {
+      grid-area: header;
+    }
+    
+    .main {
+      display: flex;
+      justify-content: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      grid-area: main; 
+      gap: 20px;        
+    }
+
+    .footer {
+      position: relative;
+      padding-top: 20px;
+      grid-area: footer;
+    }
+
+    .navigation {
+      display: flex;      
+      list-style: none;
+      justify-content: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      margin-bottom: 70px;
+      gap: 30px;
+    }
+
+    .button {
+      border: none;
+      background-color: rgb(119, 201, 153);
+      font-size: 40px;
+      color: aliceblue;
+      padding: 15px 20px;
+      border-radius: 50px;
+      transition: 1000ms;
+    }
+
+    .button:hover {
+      transform: scale(1.2);
+      background-color: rgb(184, 190, 114);
+      color: rgb(29, 31, 12);
+    }
+
+    .main_item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      height: 250px;
+      background-color: rgb(84, 11, 130);
+      color: aliceblue;
+      font-size: 30px;
+      transition: 2000ms;
+    }
+
+    .main_item:hover {
+      transform: rotate(180deg);
+    }
+
+    .footer_item {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: red;      
+      animation-name: ball;  
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;      
+    }
+
+    .footer_item:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes ball {
+      from {
+        top: 5%;
+        left: 0;
+        background-color: red;
+      }
+
+      10% {
+        top: 85%;
+        left: 9%;
+        background-color: blueviolet;
+      }
+
+      20% {
+        top: 0;
+        left: 18%;
+        background-color: chartreuse;
+      }
+
+      30% {
+        top: 85%;
+        left: 27%;
+        background-color: darkgoldenrod;
+      }
+
+      40% {
+        top: 0;
+        left: 36%;
+        background-color: darkmagenta;
+      }
+
+      50% {
+        top: 85%;
+        left: 45%;
+        background-color: darkturquoise;
+      }
+
+      60% {
+        top: 0;
+        left: 54%;
+        background-color: deeppink;        
+      }
+
+      70% {
+        top: 85%;
+        left: 63%;
+        background-color: forestgreen;
+      }
+
+      80% {
+        top: 0;
+        left: 72%;
+        background-color: gold;        
+      }
+
+      90% {
+        top: 85%;
+        left: 81%;
+        background-color: indianred;
+      }
+
+      to {
+        top: 0;
+        left: 90%;
+        background-color: khaki;
+      }
+    }
+
